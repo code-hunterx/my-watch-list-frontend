@@ -1,0 +1,29 @@
+<div id="entry-comp-container">
+    <mat-toolbar color="primary">
+          <span class = "logo-text">My Watchlist
+            <mat-icon>dvr</mat-icon>
+          </span>          
+          <div class="button-container">
+            <span class ="span-button home"><button class="home-button"type="button" mat-flat-button color="primary" (click)="home()">Home
+              <mat-icon>home</mat-icon>
+              </button>
+            </span>
+            <span>|</span>
+            <span class ="span-button adminBoard" *ngIf="showAdminBoard"><button mat-flat-button color="primary" (click)="admin()">Admin
+              <mat-icon>event_seat</mat-icon>
+              </button>
+            </span>
+            <span class ="span-button userName"><button mat-flat-button  color="primary" class="capitalize"  (click)="profile()">{{ username }}
+              <mat-icon>account_circle</mat-icon>
+              </button>
+            </span>
+            <span class ="span-button logout"><button mat-flat-button color="primary" (click)="logout()">Logout
+              <mat-icon>power_settings_new</mat-icon>
+              </button>
+          </span>  
+          </div>
+    </mat-toolbar>
+    <mat-toolbar *ngIf="deviceXs"></mat-toolbar>
+</div>
+  
+  

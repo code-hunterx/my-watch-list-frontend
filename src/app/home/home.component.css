@@ -1,0 +1,49 @@
+.container {
+    min-width: 100%;
+    min-height: 100%;
+}
+
+mat-card {
+    min-width: 200px;
+    max-height: 100%;
+}
+.content{
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+}
+
+
+.left-button{
+    min-height: 100%;
+}
+
+.right-button{
+    min-height: 100%;
+}
+.scrolling-wrapper-flexbox {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+}
+
+mat-card{
+    height:200px;
+    overflow:hidden;
+}
+
+.scrolling-wrapper-flexbox>mat-card {
+    flex: 0 0 auto;
+}
+
+mat-card img{ 
+    width: 100%; 
+    height: 100%;    
+    object-fit: contain; 
+  }
+
+.scrolling-wrapper-flexbox::-webkit-scrollbar {
+    background: transparent;
+}
+

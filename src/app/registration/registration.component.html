@@ -1,0 +1,51 @@
+<div class ="login-container">
+	<mat-card class="example-card">
+		<mat-card-header>
+		  <mat-card-title class="title-button-container" >
+			  <div class="title-button-signin">Sign Up</div>
+		  </mat-card-title>
+		</mat-card-header>
+		<mat-card-content>
+			<form [formGroup]="regisForm" (ngSubmit)="onSubmit()" class="form-class">
+        <div class="field-container">
+          <mat-form-field  appearance="outline" class="example-full-width" >
+            <mat-label>First name</mat-label>
+            <input matInput type ="text" name="firstName" formControlName ="firstName">
+          </mat-form-field>
+          <mat-form-field appearance="outline" class="example-full-width">
+            <mat-label>Last Name</mat-label>
+            <input matInput type ="text" name="lastName" formControlName ="lastName">
+          </mat-form-field>
+        </div>
+        <div class="field-container">
+          <mat-form-field appearance="outline" class="example-full-width">
+            <mat-label>Email</mat-label>
+            <input matInput type ="email" placeholder = "Ex. Lisa.Ann@email.com"   name="email" formControlName= "email">
+          </mat-form-field>
+        </div>
+        <div class="field-container">
+          <mat-form-field appearance="outline" class="example-full-width">
+            <mat-label>Password</mat-label>
+            <input matInput  type="password"  name="password" formControlName="password">
+          </mat-form-field>
+        </div>
+        <div class="field-container">
+          <mat-form-field appearance="outline" class="example-full-width">
+            <mat-label>Retype Password</mat-label>
+            <input matInput  type="password"  name="matchingPassword" formControlName="matchingPassword">
+          </mat-form-field>
+        </div>
+				<div class="button-container">
+					<button mat-raised-button type="submit">Sign Up
+						<mat-icon>login</mat-icon>
+				    </button>
+				    <button mat-raised-button routerLink="login" type="reset">Back To Login Page
+						<mat-icon>autorenew</mat-icon>
+				  	</button>
+				</div>
+			</form>
+		</mat-card-content>
+	  </mat-card>
+</div>
+
+

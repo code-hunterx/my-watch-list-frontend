@@ -1,0 +1,72 @@
+<div class="container" >
+  <app-entry [deviceXs]="deviceXs"></app-entry>
+  <mat-toolbar >New Releases</mat-toolbar>
+  <div class="content">
+    <div *ngIf="getLeftScrollPosition(0)">
+      <button mat-button class = "left-button" (click)="scrollLeft(0)"  >
+        <mat-icon>arrow_back_ios</mat-icon>
+      </button> 
+    </div> 
+    <div class="scrolling-wrapper-flexbox" >
+      <div *ngFor="let mediaItem of mediaItems">
+        <mat-card>
+          <img mat-card-image [src]="getImagePath(mediaItem.image)"/>
+          <mat-card-actions>
+            <button mat-button>LIKE</button> <button mat-button>SHARE</button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+    <div *ngIf="getRightScrollPosition(0)">
+      <button mat-button class = "right-button" (click)="scrollRight(0)">
+        <mat-icon>arrow_forward_ios</mat-icon>
+      </button> 
+    </div>
+  </div>
+  <mat-toolbar>Last Watched</mat-toolbar>
+  <div class="content">
+    <div *ngIf="getLeftScrollPosition(1)">
+      <button mat-button class = "left-button" (click)="scrollLeft(1)"  >
+        <mat-icon>arrow_back_ios</mat-icon>
+      </button> 
+    </div> 
+    <div class="scrolling-wrapper-flexbox" >
+      <div *ngFor="let num of [1,2,3,4,5,6,7]">
+        <mat-card>
+          <img mat-card-image src= "/assets/Images/blue-and-pink-wallpapers_6964083.jpg"/>
+          <mat-card-actions>
+            <button mat-button>LIKE</button> <button mat-button>SHARE</button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+    <div *ngIf="getRightScrollPosition(1)">
+      <button mat-button class = "right-button" (click)="scrollRight(1)">
+        <mat-icon>arrow_forward_ios</mat-icon>
+      </button> 
+    </div>
+  </div>
+  <mat-toolbar>Reminders</mat-toolbar>
+  <div class="content">
+    <div *ngIf="getLeftScrollPosition(2)">
+      <button mat-button class = "left-button" (click)="scrollLeft(2)"  >
+        <mat-icon>arrow_back_ios</mat-icon>
+      </button> 
+    </div> 
+    <div class="scrolling-wrapper-flexbox" >
+      <div *ngFor="let num of [1,2,3,4,5,6,7]">
+        <mat-card>
+          <img mat-card-image src= "/assets/Images/blue-and-pink-wallpapers_6964083.jpg"/>
+          <mat-card-actions>
+            <button mat-button>LIKE</button> <button mat-button>SHARE</button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+    <div *ngIf="getRightScrollPosition(2)">
+      <button mat-button class = "right-button" (click)="scrollRight(2)">
+        <mat-icon>arrow_forward_ios</mat-icon>
+      </button> 
+    </div>
+  </div>
+</div>

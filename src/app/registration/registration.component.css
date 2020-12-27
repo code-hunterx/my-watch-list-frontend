@@ -1,0 +1,77 @@
+
+
+
+body, html {
+    height: 100%;
+    width:100%;  
+}
+
+.login-container{
+  min-height:100vh;
+  min-height:100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('C:/Users/NIRAV/Documents/Angular/MyWatchList/my-watch-list/src/assets/Images/wp1945898-movie-posters-wallpapers (3).jpg');
+  background-repeat:no-repeat;
+  background-size: inherit;
+  background-position: center;
+  flex-direction: column;
+
+}
+
+.example-card{
+  justify-items: flex-end;
+  min-width: 25%;
+  min-height: 50%;  
+  align-items: center; 
+} 
+
+.form-class{
+display: flex;
+flex-direction: column;
+min-height: 100%;
+}
+.field-container{
+  display: flex;
+}
+
+.field-container>mat-form-field{
+  flex:1 1 auto;
+}
+
+.input-field-container{
+  flex:1;
+}
+
+.button-container{
+display: flex;
+flex:1 1 auto;
+justify-items: center;
+}
+.bottom-signup{
+  flex:1 1 auto;
+}
+
+.button-container>button{
+flex:1 1 auto;
+
+margin: 1%;
+}
+
+.title-button-container{
+ display: flex;
+ min-width: 100%;
+ justify-content: center;
+ align-items: center;
+}
+
+.title-button-signin{
+flex:1 ;
+color:#3f51b5;
+}
+
+button{
+ background-color: #ffffff;
+ color:#3f51b5
+}

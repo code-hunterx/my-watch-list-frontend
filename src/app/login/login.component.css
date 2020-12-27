@@ -1,0 +1,26 @@
+
+.login-container{
+  min-height: 100vh;
+  background-image: url('C:/Users/NIRAV/Documents/Angular/MyWatchList/my-watch-list/src/assets/Images/wp1945898-movie-posters-wallpapers (3).jpg');
+  background-repeat: no-repeat;
+  background-size: 1920px 1080px;
+  background-position: center;
+}
+.login-container mat-card {
+  padding: 0px;
+  
+}
+
+.form-class {
+  padding: 20px;
+}
+
+
+button {
+  color: #000000;
+  margin:0 15px;
+}
+
+.text-danger {
+  color: red;
+}

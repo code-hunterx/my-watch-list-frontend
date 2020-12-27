@@ -3,7 +3,13 @@
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
     "outDir": "./out-tsc/app",
-    "types": []
+    "experimentalDecorators": true,
+    "types": [],
+    "baseUrl": "./",
+    "paths": {
+      "@myapp/*":["src/app/*"],
+      "@myenvironments/*":["src/environments/*"]
+    }
   },
   "files": [
     "src/main.ts",

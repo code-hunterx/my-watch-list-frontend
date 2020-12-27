@@ -1,0 +1,37 @@
+<div class="login-container" fxLayoutAlign="center center" fxFlexFill >
+	<mat-card class="example-card" fxFlex="25" color="primary" fxLayout="column">
+		<mat-toolbar color="primary">Sign In</mat-toolbar>
+		<form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="form-class" fxLayoutAlign="stretch"
+			fxLayout="column">
+			<mat-form-field appearance="outline" color="primary">
+				<mat-label>Email</mat-label>
+				<input matInput type="email" placeholder="Ex. Lisa.Ann@email.com" name="email"
+					formControlName="username" class="input-section">
+				<mat-hint *ngIf="isEmptyEmail" align="start">*Required</mat-hint>
+				<mat-hint *ngIf="isValidEmail" align="start">*Invalid Email Address</mat-hint>
+			</mat-form-field>
+
+			<mat-form-field appearance="outline" color="primary">
+				<mat-label>Password</mat-label>
+				<input matInput type="password" name="password" formControlName="password" class="input-section">
+				<mat-hint *ngIf="isEmptyPassword" align="start">*Required</mat-hint>
+			</mat-form-field>
+
+			<div class="button-container" fxLayout="row wrap" fxLayoutAlign="space-between" >
+				<button mat-raised-button color="primary" 
+					[disabled]="isEmptyEmail || isEmptyPassword || isValidEmail" fxFlex="30">Login
+					<mat-icon>login</mat-icon>
+				</button>
+				<button mat-raised-button color="primary" fxFlex="50">Forgot Password 
+					<mat-icon>autorenew</mat-icon>
+				</button>
+			</div>
+			<div class="bottom-signup">
+				<p>Do not have an account? <a href="#" routerLink="/register">Sign Up</a></p>
+			</div>
+			<div *ngIf="isLoginFailed" class="bottom-signup text-danger">
+				Invalid username or password
+			</div>
+		</form>
+	</mat-card>
+</div>
